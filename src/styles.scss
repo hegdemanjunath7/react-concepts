@@ -6,12 +6,12 @@
 
 .day {
   color: black;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .night {
   color: red;
-  background-color: #142b41;
+  background-color: rgb(0, 0, 0);
 }
 
 h1,
@@ -33,7 +33,7 @@ footer {
   text-align: right;
   padding: 1rem;
   position: fixed;
-  bottom: 10px;
+  top: 10px;
   right: 0px;
   width: 100%;
 }
