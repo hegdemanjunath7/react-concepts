@@ -1,0 +1,7 @@
+Context is a clear win when you need to update the values rarely, like storing user objects upon login, language preference, theme colors and so on (as these do not trigger the updates more frequently)
+
+Context seems to be simple compared to redux, but you shouldn’t use it where the values update more frequently. It is not optimized for that.
+
+Adding Redux to your project brings more dependency packages with them, increasing the bundle size, while context can be used out of the box with React.
+
+Thus from the above points, Context can definitely be used for low-frequency updates but is not recommended for general state management.
