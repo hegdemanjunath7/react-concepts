@@ -1,3 +1,13 @@
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+Most commonly it is used for share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language
+
+React.createContext - const MyContext = React.createContext();
+Creates a Context object. When React renders a component that subscribes to this Context object it will read the current context value from the closest matching Provider above it in the tree.
+
+MyContext.Provider - <MyContext.Provider value={/* some value */}>
+Every Context object comes with a Provider React component that allows consuming components to subscribe to context changes. Accepts a value prop to be passed to consuming components that are descendants of this Provider. One Provider can be connected to many consumers. Providers can be nested to override values deeper within the tree.
+
 Context is a clear win when you need to update the values rarely, like storing user objects upon login, language preference, theme colors and so on (as these do not trigger the updates more frequently)
 
 Context seems to be simple compared to redux, but you shouldn’t use it where the values update more frequently. It is not optimized for that.
