@@ -40,10 +40,10 @@ class CompanyContainer extends React.Component {
 /* Dumb Component */
 const CompanyDetails = () => (
   <CompanyContext.Consumer>
-    {context => (
+    {datasetsData => (
       <div className="col-md-12">
         <div className="row">
-          {context.data.map(branches => (
+          {datasetsData.data.map(branches => (
             <div className="col-md-4" key={branches.id}>
               <div className="card">
                 <div className="card-body">
