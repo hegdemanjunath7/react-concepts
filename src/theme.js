@@ -10,7 +10,7 @@ class TProvider extends React.Component {
   };
 
   state = {
-    theme: "night",
+    theme: "day",
     toggleTheme: this.toggleTheme
   };
 
